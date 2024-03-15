@@ -11,7 +11,6 @@ login credentials to allow access to the system.
 
   def current_traffic(self,):
     
-
   def traffic_sumamry(self, users):
     
         
