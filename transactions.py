@@ -1,15 +1,10 @@
-'''
-Transcations class will display the total amount of money spent on machines and stores the time in which the machines usage starts 
-
-
-'''
-
 from datetime import datetime
-
 import pytz
 
-
 class Transactions:
+  '''
+Transcations class will display the total amount of money spent on machines and stores the time in which the machines usage starts 
+'''
   def __init__(self, cost, time, pay):
     self.cost = cost
     self.time = time
