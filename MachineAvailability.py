@@ -1,9 +1,8 @@
-'''
+class MachineAvailability :
+   '''
 This MachineAvailability class represents which machine is in use and which isnt. It displays a status to the user for which machines 
 they can and can't use, including cost, time remaining and load size of each machine.
 '''
-
-class MachineAvailability :
    def __init__ (self, number, machine_type, load_size): #initialize machineavailibility with attributes
      #arguments: number represents # representing certain machine, machine_type represents washer or dryer load_size represents load size of machine
      self.number = number
