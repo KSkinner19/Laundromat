@@ -25,12 +25,12 @@ they can and can't use, including cost, time remaining and load size of each mac
    def machine_status(self): 
     #return respnse saying whther available for use or not
      if self.in_use:
-      return f" Machine(self.number) is currently in use")
+      return f"(Machine(self.number) is currently in use"))
      else:
-      return f" Machine(self.number) is currently available for use")
+      return f"(Machine(self.number) is currently available for use"))
    def set_time_remaining(self,time):
     #set time remaining to complete task
     self.time_remaining = time
     #return message indicating time remaining for machine
-    return f"Machine {self.number} has {self_time_remaining} minutes remaining until complete
+    return f"(Machine {self.number} has {self_time_remaining} minutes remaining until complete")
   
