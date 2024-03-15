@@ -1,4 +1,7 @@
-import time
+from datetime import datetime
+
+import pytz
+
 
 class Transactions:
   def __init__(self, cost, time, pay):
@@ -10,5 +13,9 @@ def get_cost(washer, dryer):
   total = float(washer + dryer)
   return f"Total cost: ${total:.2f}"
 
-def time_track():
-  return time.strftime("%H:%M")
+
+
+def time_track(time_zone='America/Los_Angeles'):
+    tz = pytz.timezone(time_zone)
+    now = datetime.now(tz)
+    return f"Transaction made at: {now.strftime('%I:%M %p')}"
