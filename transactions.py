@@ -1,3 +1,9 @@
+'''
+Transcations class will display the total amount of money spent on machines and stores the time in which the machines usage starts 
+
+
+'''
+
 from datetime import datetime
 
 import pytz
