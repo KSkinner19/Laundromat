@@ -8,10 +8,12 @@ import pytz
 
 class Transactions:
 
-  def __init__(self, cost, time, pay):
+  def __init__(self, cost, time, payment_type, card_number=None, prepaid_card_info=None):
     self.cost = cost
     self.time = time
-    self.pay = pay
+    self.payment_type = payment_type
+    self.card_number = card_number
+    self.prepaid_card_info = prepaid_card_info
 
   def get_cost(washer, dryer):
     total = float(washer + dryer)
@@ -23,8 +25,26 @@ class Transactions:
     now = datetime.now(tz)
     return f"Transaction made at: {now.strftime('%I:%M %p')}."
 
-  def payment(choice):
-    if choice == 0:
-      return "Payment form: Card"
-    elif choice == 1:
-      return "Payment form: Prepaid"
+   def make_payment(self):
+        if self.payment_type == 'Card':
+            if self.card_number:
+                # Process card payment
+                # Return True if payment is successful, False otherwise
+                return True
+            else:
+                return False
+        elif self.payment_type == 'Prepaid':
+            if self.prepaid_card_info:
+                # Process prepaid card payment
+                # Return True if payment is successful, False otherwise
+                return True
+            else:
+                return False
+        else:
+            return False
+
+    def confirm_payment(self):
+        if self.make_payment():
+            return "Payment Successful"
+        else:
+            return "Payment Failed"
