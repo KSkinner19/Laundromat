@@ -48,3 +48,11 @@ class Transactions:
             return "Payment Successful"
         else:
             return "Payment Failed"
+
+    def send_notification(self, recipient):
+        if recipient == 'customer': 
+            return "Notification sent to customer: Your payment has been processed."
+        elif recipient == 'owner':         
+            return "Notification sent to owner: A transaction has been made in your laundromat."
+        else:
+            return "Invalid recipient"
