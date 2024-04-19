@@ -28,15 +28,11 @@ class Transactions:
    def make_payment(self):
         if self.payment_type == 'Card':
             if self.card_number:
-                # Process card payment
-                # Return True if payment is successful, False otherwise
                 return True
             else:
                 return False
         elif self.payment_type == 'Prepaid':
             if self.prepaid_card_info:
-                # Process prepaid card payment
-                # Return True if payment is successful, False otherwise
                 return True
             else:
                 return False
