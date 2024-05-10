@@ -3,7 +3,7 @@
 This MachineAvailability class represents which machine is in use and which isnt. It displays a status to the user for which machines 
 they can and can't use, including cost, time remaining and load size of each machine.
 ''' 
-   class MachineAvailability:
+  class MachineAvailability:
     def __init__(self, number, machine_type, load_size):
         self.number = number
         self.machine_type = machine_type
@@ -26,18 +26,14 @@ they can and can't use, including cost, time remaining and load size of each mac
 
 
     def machine_status(self):
-            def machine_status(self):
-                if self.in_use:
-                    status_message = f"Machine {self.number} is currently in use. "
-                    time_message = f"Time remaining: {self.time_remaining} minutes."
-                    return status_message + time_message
-                else:
-                    return f"Machine {self.number} is currently available for use."
+        if self.in_use:
+            return f"Machine {self.number} is currently in use. Time remaining: {self.time_remaining} minutes."
+        else:
+            return f"Machine {self.number} is currently available for use."
 
     def set_time_remaining(self, time):
         self.time_remaining = time
-        return f"Machine {self.number} has {self.time_remaining} " \
-           "minutes remaining until done."
+        return f"Machine {self.number} has {self.time_remaining} minutes remaining until done."
 
     def decrease_time_remaining(self):
         if self.in_use and self.time_remaining > 0:
