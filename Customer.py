@@ -1,37 +1,27 @@
 class Customer:
-  '''
-this Customer class gets the customer login inforamtion and stores their username and password. Customer_info stores things
-like the customers Name,Phone number, Email, Payment information. Set_user_info and set_user_login sets their information and
-login credentials to allow access to the system.
-'''
-  def __init__(self):
+
+    def __init__(self, name, birthdate):
+        self.name = name
+        self.birthdate = birthdate
         self.username = ""
         self.password = ""
-        self.name = ""
-        self.phone_number = ""
+        self.phone_num = ""
         self.email = ""
-        self.payment_info = ""
-        self.laundry_weight = int("")
-        self.notifications = []
+        self.card_number = ""
+        self.card_ccv = ""
+        self.notification_preference = ""
 
-  def set_user_info(self, name, phone_number, email, payment_info):
-        self.name = name
-        self.phone_number = phone_number
-        self.email = email
-        self.payment_info = payment_info
-
-  def set_user_login(self, ):
+    def set_user_login(self, username, password):
         self.username = username
         self.password = password
-    
-  def add_notification(self, notification):
-        self.notifications.append(notification)
 
-    def view_notifications(self):
-        return self.notifications
+    def set_user_info(self, phone_num, email, card_number, card_ccv):
+        self.phone_num = phone_num
+        self.email = email
+        self.card_number = card_number
+        self.card_ccv = card_ccv
 
-class Notification:
-    def __init__(self, message, timestamp):
-        self.message = message
-        self.timestamp = timestamp
+    def set_notification_preference(self, notification_preference):
+        self.notification_preference = notification_preference
+
 
