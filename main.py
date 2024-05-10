@@ -1,3 +1,7 @@
+''' this is the main.py, where it takes the customer info, customer traffic, machine availability, and transcations
+and makes it accessible to both the customer and the admin. It takes user and admin information and stores it,
+all while providing useful information that will keep this business afloat'''
+
 from datetime import datetime, timedelta
 import threading
 
